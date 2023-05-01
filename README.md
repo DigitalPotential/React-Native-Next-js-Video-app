@@ -1,3 +1,55 @@
+## Project overview
+
+Here's an overview of the social media-like app I'm looking to build with the technologies we chosen, working with a very skilled backend developer named Fredrik Hölinger:
+
+Project goal: I'm looking to build a social media-like app where producers can post content and users can interact with the producers. Users should be able to buy live video sessions from the producers, and both parties should be able to talk and see each other using video chat.
+
+## Tech stack:
+
+## Frontend Mobile:
+
+- React Native (with Expo): Develop the cross-platform mobile app using React Native and the Expo framework.
+- React Navigation: Manage navigation and screen transitions within the app.
+- React Hook Form: Handle form inputs and validation.
+- Socket.IO: Enable real-time communication for live chat features.
+- React Native WebRTC: Implement video chat functionality in the React Native app.
+
+## Frontend Web:
+
+- Next.js: Build the web version of the app, leveraging server-side rendering and static site generation.
+- React: Develop user interfaces for the web version using React.
+- Redux: Manage state across the app, ensuring consistent data flow.
+
+## Backend:
+
+- Node.js: Run server-side JavaScript, creating the foundation for the backend.
+- Express: Build the API and handle HTTP requests.
+- tRPC: Implement a type-safe API layer, making it easier to work with TypeScript.
+- Prisma: ORM for working with the PostgreSQL database, providing a type-safe way to interact with the database.
+- TypeScript: Write type-safe code, reducing the chance of errors and improving the developer experience.
+
+## Database:
+
+- PostgreSQL: Use a powerful, open-source relational database to store my app data.
+
+## Authentication:
+
+- Clerk: Handle authentication and user management, including third-party authentication like Google Sign-In.
+
+## Real-time Communication:
+
+- Socket.IO: Enable real-time communication for features like live chat and live video sessions.
+- React Native WebRTC: Implement video chat functionality in my React Native app.
+
+## Payment Processing:
+
+- Stripe: Integrate Stripe to handle payments when users purchase live video sessions.
+
+## Deployment:
+
+- Vercel: Deploy the web version of the application on Vercel for scalability and performance.
+  Development process: I'll begin by planning my project, defining the features and functionality I want to include in the app. I'll split the project into manageable tasks and use agile methodologies like Scrum or Kanban to manage the development process. I'll develop the backend and frontend in parallel, with my experienced backend developer focusing on building the API, database schema, and authentication, while my junior frontend developer works on the user interfaces, navigation, and integration with the backend API. I'll allow time for integration, testing, and bug fixing, ensuring the app is stable and functioning as expected. Finally, I'll deploy the application to Vercel.
+
 [![CI](https://github.com/perkinsjr/t3-turbo-and-clerk/actions/workflows/ci.yml/badge.svg)](https://github.com/perkinsjr/t3-turbo-and-clerk/actions/workflows/ci.yml)
 
 # Create T3 Turbo with Clerk Authentication
@@ -155,10 +207,10 @@ Deploying your Expo application works slightly differently compared to Next.js o
    const CLERK_PUBLISHABLE_KEY = "your-clerk-publishable-key";
 
    const defineConfig = (_ctx: ConfigContext): ExpoConfig => ({
-      name: "expo",
-      slug: "expo",
-      scheme: "your-app-scheme",
-      // ...
+     name: "expo",
+     slug: "expo",
+     scheme: "your-app-scheme",
+     // ...
    });
    ```
 
@@ -187,9 +239,9 @@ Deploying your Expo application works slightly differently compared to Next.js o
    $ eas update:configure
    ```
 
-6. Before we can send out updates to your app, you have to create a new build and submit it to the app stores. For every change that includes native APIs, you have to rebuild the app and submit the update to the app stores. See steps 2 and 3.
+7. Before we can send out updates to your app, you have to create a new build and submit it to the app stores. For every change that includes native APIs, you have to rebuild the app and submit the update to the app stores. See steps 2 and 3.
 
-7. Now that everything is ready for updates, let's create a new update for `production` builds. With the `--auto` flag, EAS Update uses your current git branch name and commit message for this update. See [How EAS Update works](https://docs.expo.dev/eas-update/how-eas-update-works/#publishing-an-update) for more information.
+8. Now that everything is ready for updates, let's create a new update for `production` builds. With the `--auto` flag, EAS Update uses your current git branch name and commit message for this update. See [How EAS Update works](https://docs.expo.dev/eas-update/how-eas-update-works/#publishing-an-update) for more information.
 
    ```bash
    $ cd apps/expo
@@ -198,7 +250,7 @@ Deploying your Expo application works slightly differently compared to Next.js o
 
    > Your OTA (Over The Air) updates must always follow the app store's rules. You can't change your app's primary functionality without getting app store approval. But this is a fast way to update your app for minor changes and bug fixes.
 
-8. Done! Now that you have created your production build, submitted it to the stores, and installed EAS Update, you are ready for anything!
+9. Done! Now that you have created your production build, submitted it to the stores, and installed EAS Update, you are ready for anything!
 
 ## References
 
